@@ -4,6 +4,7 @@ import com.dobudobu.article_management_service.Client.FileClient;
 import com.dobudobu.article_management_service.Dto.Request.ArticleCreateRequest;
 import com.dobudobu.article_management_service.Dto.Response.ArticleCreateResponse;
 import com.dobudobu.article_management_service.Dto.Response.FilePostResponse;
+import com.dobudobu.article_management_service.Dto.Response.GetListArticleResponse;
 import com.dobudobu.article_management_service.Dto.Response.ResponseHandling;
 import com.dobudobu.article_management_service.Entity.Article;
 import com.dobudobu.article_management_service.Exception.ServiceCustomException.CustomExceptionAlreadyExists;
@@ -18,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -77,6 +79,12 @@ public class ArticleServiceImplement implements ArticleService {
         responseHandling.setErrors(false);
 
         return responseHandling;
+    }
+
+    @Override
+    public ResponseHandling<List<GetListArticleResponse>> getArticle(int page) {
+
+        return null;
     }
 
 
